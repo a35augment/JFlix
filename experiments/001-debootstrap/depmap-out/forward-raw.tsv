@@ -1,0 +1,144 @@
+adduser	passwd
+apt	base-passwd | adduser, sqv , libapt-pkg7.0 , debian-archive-keyring, libc6 , libgcc-s1 , libseccomp2 , libssl3t64 , libstdc++6 , libsystemd0
+apt-utils	apt , libapt-pkg7.0 , libc6 , libdb5.3t64, libgcc-s1 , libstdc++6
+base-files	awk
+base-passwd	libc6 , libdebconfclient0 , libselinux1
+bash	base-files , debianutils , libc6 , libtinfo6
+bsdutils	libc6 , libsystemd0
+coreutils	libacl1 , libattr1 , libc6 , libcap2 , libgmp10 , libselinux1 , libssl3t64 , libsystemd0
+cpio	libc6
+cron	libc6 , libpam0g , libselinux1 , sensible-utils, libpam-runtime, init-system-helpers , cron-daemon-common
+cron-daemon-common	systemd | systemd-standalone-sysusers | systemd-sysusers, adduser
+dash	debianutils , libc6
+debconf	
+debconf-i18n	debconf , liblocale-gettext-perl, libtext-charwidth-perl, libtext-iconv-perl, libtext-wrapi18n-perl
+debian-archive-keyring	
+debianutils	libc6
+dhcpcd-base	adduser, libc6 , libssl3t64 , libudev1
+diffutils	libc6
+dmidecode	libc6
+dpkg	tar , libbz2-1.0, libc6 , liblzma5 , libmd0 , libselinux1 , libzstd1 , zlib1g
+e2fsprogs	logsave, libblkid1 , libc6 , libcom-err2 , libext2fs2t64 , libss2 , libuuid1
+fdisk	libc6 , libfdisk1 , libmount1 , libncursesw6 , libreadline8t64 , libsmartcols1 , libtinfo6
+findutils	libc6 , libselinux1
+gcc-14-base	
+grep	libc6 , libpcre2-8-0
+gzip	libc6
+hostname	libc6
+ifupdown	libc6 , adduser, iproute2
+init	systemd-sysv | sysvinit-core
+init-system-helpers	
+iproute2	debconf | debconf-2.0, libbpf1 , libc6 , libcap2 , libdb5.3t64, libelf1t64 , libmnl0 , libselinux1 , libtirpc3t64 , libxtables12 , libcap2-bin
+iputils-ping	libc6 , libcap2 , libidn2-0
+kmod	libc6 , libssl3t64 , libkmod2
+less	libc6 , libtinfo6
+libacl1	libc6
+libapparmor1	libc6
+libapt-pkg7.0	libbz2-1.0, libc6 , libgcc-s1 , liblz4-1 , liblzma5 , libssl3t64 , libstdc++6 , libsystemd0 , libudev1 , libxxhash0 , libzstd1 , zlib1g
+libattr1	libc6
+libaudit-common	
+libaudit1	libaudit-common , libc6 , libcap-ng0
+libblkid1	libc6
+libbpf1	libc6 , libelf1t64 , zlib1g
+libbsd0	libc6 , libmd0
+libbz2-1.0	libc6
+libc-bin	libc6 , libc6
+libc6	libgcc-s1
+libcap-ng0	libc6
+libcap2	libc6
+libcap2-bin	libc6 , libcap2
+libcom-err2	libc6
+libcrypt1	libc6
+libdb5.3t64	libc6
+libdebconfclient0	libc6
+libedit2	libbsd0 , libc6 , libtinfo6
+libelf1t64	libc6 , libzstd1 , zlib1g
+libext2fs2t64	libc6
+libfdisk1	libblkid1 , libc6 , libuuid1
+libgcc-s1	gcc-14-base , libc6
+libgmp10	libc6
+libgssapi-krb5-2	libkrb5-3 , libc6 , libcom-err2 , libk5crypto3 , libkrb5support0
+libhogweed6t64	libc6 , libgmp10 , libnettle8t64
+libidn2-0	libc6 , libunistring5
+libjansson4	libc6
+libk5crypto3	libc6 , libkrb5support0
+libkeyutils1	libc6
+libkmod2	libc6 , libssl3t64
+libkrb5-3	libkrb5support0 , libc6 , libcom-err2 , libk5crypto3 , libkeyutils1 , libssl3t64
+libkrb5support0	libc6
+liblastlog2-2	libc6 , libsqlite3-0
+liblocale-gettext-perl	libc6 , perl-base , perlapi-5.40.0
+liblz4-1	libc6 , libxxhash0
+liblzma5	libc6
+libmd0	libc6
+libmnl0	libc6
+libmount1	libblkid1 , libc6 , libselinux1
+libncursesw6	libtinfo6 , libc6
+libnettle8t64	libc6
+libnewt0.52	libc6 , libslang2
+libnftables1	libc6 , libgmp10 , libjansson4 , libmnl0 , libnftnl11 , libxtables12
+libnftnl11	libc6 , libmnl0
+libpam-modules	libaudit1 , libc6 , libcrypt1 , libdb5.3t64, libpam0g , libselinux1 , libsystemd0 , debconf | debconf-2.0, libpam-modules-bin
+libpam-modules-bin	libaudit1 , libc6 , libcrypt1 , libpam0g , libselinux1 , libsystemd0
+libpam-runtime	debconf | debconf-2.0, debconf | cdebconf, libpam-modules
+libpam0g	libaudit1 , libc6 , debconf | debconf-2.0
+libpcre2-8-0	libc6
+libpopt0	libc6
+libproc2-0	libc6 , libsystemd0
+libreadline8t64	readline-common, libc6 , libtinfo6
+libseccomp2	libc6
+libselinux1	libc6 , libpcre2-8-0
+libsemanage-common	
+libsemanage2	libsemanage-common , libaudit1 , libbz2-1.0, libc6 , libselinux1 , libsepol2
+libsepol2	libc6
+libslang2	libc6
+libsmartcols1	libc6
+libsqlite3-0	libc6
+libss2	libcom-err2, libc6
+libssl3t64	libc6 , libzstd1 , zlib1g , openssl-provider-legacy
+libstdc++6	gcc-14-base , libc6 , libgcc-s1
+libsystemd-shared	libacl1 , libaudit1 , libblkid1 , libc6 , libcap2 , libcrypt1 , libmount1 , libpam0g , libseccomp2 , libselinux1 , libssl3t64
+libsystemd0	libc6 , libcap2
+libtext-charwidth-perl	libc6 , perl-base , perlapi-5.40.0
+libtext-iconv-perl	libc6 , perl-base , perlapi-5.40.0
+libtext-wrapi18n-perl	libtext-charwidth-perl
+libtinfo6	libc6
+libtirpc-common	
+libtirpc3t64	libc6 , libgssapi-krb5-2 , libtirpc-common
+libudev1	libc6 , libcap2
+libunistring5	libc6
+libuuid1	libc6
+libxtables12	libc6
+libxxhash0	libc6
+libzstd1	libc6
+linux-sysctl-defaults	
+login	libpam-modules, libpam-runtime, libaudit1 , libc6 , libcrypt1 , libpam0g , login.defs
+login.defs	
+logrotate	cron | anacron | cron-daemon | systemd-sysv, libacl1 , libc6 , libpopt0 , libselinux1
+logsave	libc6
+mawk	libc6
+mount	libblkid1 , libc6 , libmount1 , libselinux1 , libsmartcols1
+nano	libc6 , libncursesw6 , libtinfo6
+ncurses-base	
+ncurses-bin	libc6 , libtinfo6
+netbase	
+nftables	libnftables1 , libc6 , libedit2
+openssl-provider-legacy	libc6 , libssl3t64
+passwd	base-passwd , libpam-modules, login.defs, libacl1 , libattr1 , libaudit1 , libbsd0 , libc6 , libcrypt1 , libpam0g , libselinux1 , libsemanage2
+perl-base	libc6 , libcrypt1
+procps	libc6 , libncursesw6 , libproc2-0 , libsystemd0 , libtinfo6 , init-system-helpers
+readline-common	
+sed	libacl1 , libc6 , libselinux1
+sensible-utils	
+sqv	libc6 , libgcc-s1 , libgmp10 , libhogweed6t64, libnettle8t64
+systemd	libacl1 , libapparmor1 , libc6 , libmount1 , libpam0g , libseccomp2 , libselinux1 , libssl3t64 , libsystemd0 , mount, libc6 , libsystemd-shared
+systemd-sysv	systemd , systemd
+sysvinit-utils	libc6
+tar	libacl1 , libc6 , libselinux1
+tzdata	debconf | debconf-2.0
+udev	libblkid1 , libc6 , libsystemd-shared , systemd | systemd-standalone-sysusers | systemd-sysusers, libkmod2, libudev1
+util-linux	libpam-modules, libpam-runtime, libblkid1 , libc6 , libcap-ng0 , libcrypt1 , liblastlog2-2 , libmount1 , libpam0g , libselinux1 , libsmartcols1 , libsystemd0, libtinfo6 , libudev1 , libuuid1
+vim-common	
+vim-tiny	vim-common , libacl1 , libc6 , libselinux1 , libtinfo6
+whiptail	libc6 , libnewt0.52 , libpopt0 , libslang2
+zlib1g	libc6

@@ -1,0 +1,160 @@
+package	script	hook	matched_line
+apt	postinst	deb-systemd-helper	deb-systemd-helper enable 'apt-daily.timer' >/dev/null || true
+apt	postinst	deb-systemd-helper	deb-systemd-helper enable 'apt-daily-upgrade.timer' >/dev/null || true
+apt	postinst	deb-systemd-helper	deb-systemd-helper unmask 'apt-daily.timer' >/dev/null || true
+apt	postinst	deb-systemd-helper	deb-systemd-helper unmask 'apt-daily-upgrade.timer' >/dev/null || true
+apt	postinst	deb-systemd-helper	deb-systemd-helper update-state 'apt-daily.timer' >/dev/null || true
+apt	postinst	deb-systemd-helper	deb-systemd-helper update-state 'apt-daily-upgrade.timer' >/dev/null || true
+apt	postinst	deb-systemd-helper	if deb-systemd-helper --quiet was-enabled 'apt-daily.timer'; then
+apt	postinst	deb-systemd-helper	if deb-systemd-helper --quiet was-enabled 'apt-daily-upgrade.timer'; then
+apt	postinst	systemctl	systemctl --system daemon-reload >/dev/null || true
+apt	postrm	deb-systemd-helper	deb-systemd-helper purge 'apt-daily-upgrade.timer' 'apt-daily.timer' >/dev/null || true
+apt	postrm	deb-systemd-helper	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+apt	postrm	systemctl	systemctl --system daemon-reload >/dev/null || true
+apt	postrm	systemctl	systemctl --system daemon-reload >/dev/null || true
+bash	postinst	update-alternatives	update-alternatives --install \
+bash	prerm	update-alternatives	update-alternatives --remove builtins.7.gz \
+cpio	postinst	update-alternatives	update-alternatives --install /usr/bin/mt mt /usr/bin/mt-gnu 10 \
+cpio	prerm	update-alternatives	update-alternatives --remove mt /usr/bin/mt-gnu
+cron	postinst	deb-systemd-helper	deb-systemd-helper enable 'cron.service' >/dev/null || true
+cron	postinst	deb-systemd-helper	deb-systemd-helper unmask 'cron.service' >/dev/null || true
+cron	postinst	deb-systemd-helper	deb-systemd-helper update-state 'cron.service' >/dev/null || true
+cron	postinst	deb-systemd-helper	if deb-systemd-helper --quiet was-enabled 'cron.service'; then
+cron	postinst	invoke-rc.d	invoke-rc.d --skip-systemd-native cron $_dh_action || exit 1
+cron	postinst	systemctl	systemctl --system daemon-reload >/dev/null || true
+cron	postinst	update-rc.d	update-rc.d cron defaults >/dev/null
+cron	postrm	deb-systemd-helper	deb-systemd-helper purge 'cron.service' >/dev/null || true
+cron	postrm	deb-systemd-helper	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+cron	postrm	systemctl	systemctl --system daemon-reload >/dev/null || true
+cron	postrm	update-rc.d	update-rc.d cron remove >/dev/null
+cron	prerm	invoke-rc.d	invoke-rc.d --skip-systemd-native cron stop || exit 1
+debianutils	postinst	update-alternatives	update-alternatives --install /usr/bin/which which /usr/bin/which.debianutils 0 \
+debianutils	prerm	update-alternatives	update-alternatives --remove which /usr/bin/which.debianutils
+dhcpcd-base	postinst	adduser --system	adduser --system \
+dpkg	postinst	deb-systemd-helper	deb-systemd-helper enable 'dpkg-db-backup.timer' >/dev/null || true
+dpkg	postinst	deb-systemd-helper	deb-systemd-helper unmask 'dpkg-db-backup.timer' >/dev/null || true
+dpkg	postinst	deb-systemd-helper	deb-systemd-helper update-state 'dpkg-db-backup.timer' >/dev/null || true
+dpkg	postinst	deb-systemd-helper	if deb-systemd-helper --quiet was-enabled 'dpkg-db-backup.timer'; then
+dpkg	postinst	systemctl	systemctl --system daemon-reload >/dev/null || true
+dpkg	postrm	deb-systemd-helper	deb-systemd-helper purge 'dpkg-db-backup.timer' >/dev/null || true
+dpkg	postrm	deb-systemd-helper	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+dpkg	postrm	systemctl	systemctl --system daemon-reload >/dev/null || true
+e2fsprogs	postinst	deb-systemd-helper	deb-systemd-helper enable 'e2scrub_all.timer' >/dev/null || true
+e2fsprogs	postinst	deb-systemd-helper	deb-systemd-helper enable 'e2scrub_reap.service' >/dev/null || true
+e2fsprogs	postinst	deb-systemd-helper	deb-systemd-helper unmask 'e2scrub_all.timer' >/dev/null || true
+e2fsprogs	postinst	deb-systemd-helper	deb-systemd-helper unmask 'e2scrub_reap.service' >/dev/null || true
+e2fsprogs	postinst	deb-systemd-helper	deb-systemd-helper update-state 'e2scrub_all.timer' >/dev/null || true
+e2fsprogs	postinst	deb-systemd-helper	deb-systemd-helper update-state 'e2scrub_reap.service' >/dev/null || true
+e2fsprogs	postinst	deb-systemd-helper	if deb-systemd-helper --quiet was-enabled 'e2scrub_all.timer'; then
+e2fsprogs	postinst	deb-systemd-helper	if deb-systemd-helper --quiet was-enabled 'e2scrub_reap.service'; then
+e2fsprogs	postinst	systemctl	systemctl --system daemon-reload >/dev/null || true
+e2fsprogs	postrm	deb-systemd-helper	deb-systemd-helper purge 'e2scrub_all.timer' 'e2scrub_reap.service' >/dev/null || true
+e2fsprogs	postrm	deb-systemd-helper	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+e2fsprogs	postrm	systemctl	systemctl --system daemon-reload >/dev/null || true
+ifupdown	postinst	deb-systemd-helper	deb-systemd-helper enable 'ifupdown-wait-online.service' >/dev/null || true
+ifupdown	postinst	deb-systemd-helper	deb-systemd-helper enable 'networking.service' >/dev/null || true
+ifupdown	postinst	deb-systemd-helper	deb-systemd-helper unmask 'ifupdown-wait-online.service' >/dev/null || true
+ifupdown	postinst	deb-systemd-helper	deb-systemd-helper unmask 'networking.service' >/dev/null || true
+ifupdown	postinst	deb-systemd-helper	deb-systemd-helper update-state 'ifupdown-wait-online.service' >/dev/null || true
+ifupdown	postinst	deb-systemd-helper	deb-systemd-helper update-state 'networking.service' >/dev/null || true
+ifupdown	postinst	deb-systemd-helper	if deb-systemd-helper debian-installed 'ifupdown-wait-online.service'; then
+ifupdown	postinst	deb-systemd-helper	if deb-systemd-helper --quiet was-enabled 'ifupdown-wait-online.service'; then
+ifupdown	postinst	deb-systemd-helper	if deb-systemd-helper --quiet was-enabled 'networking.service'; then
+ifupdown	postinst	update-rc.d	update-rc.d networking defaults >/dev/null || exit 1
+ifupdown	postrm	deb-systemd-helper	deb-systemd-helper purge 'ifupdown-wait-online.service' >/dev/null || true
+ifupdown	postrm	deb-systemd-helper	deb-systemd-helper purge 'networking.service' >/dev/null || true
+ifupdown	postrm	deb-systemd-helper	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+ifupdown	postrm	deb-systemd-helper	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+ifupdown	postrm	systemctl	systemctl --system daemon-reload >/dev/null || true
+ifupdown	postrm	systemctl	systemctl --system daemon-reload >/dev/null || true
+ifupdown	postrm	systemctl	systemctl --system daemon-reload >/dev/null || true
+ifupdown	postrm	update-rc.d	update-rc.d networking remove >/dev/null
+kmod	postinst	update-rc.d	update-rc.d kmod remove || true
+kmod	postinst	update-rc.d	# update-rc.d removes symlinks even if LSB initscript exists, contrary to
+less	postinst	update-alternatives	update-alternatives --quiet --install /usr/bin/pager pager \
+less	preinst	update-alternatives	update-alternatives --quiet --remove pager /bin/less
+less	prerm	update-alternatives	update-alternatives --quiet --remove pager /usr/bin/less
+libc6:amd64	postinst	invoke-rc.d	echo "You will need to start these manually by running \`invoke-rc.d <service> start'"
+libc6:amd64	postinst	invoke-rc.d	if invoke-rc.d ${service} reload > /dev/null 2>&1; then
+libc6:amd64	postinst	invoke-rc.d	if invoke-rc.d ${service} restart > /dev/null 2>&1; then
+libc6:amd64	postinst	invoke-rc.d	invoke-rc.d ${service} status >/dev/null 2>/dev/null && status=0 || status=$?
+libc6:amd64	postinst	systemctl	systemctl daemon-reexec
+libc6:amd64	preinst	invoke-rc.d	invoke-rc.d ${service} status >/dev/null 2>/dev/null && status=0 || status=$?
+libc6:amd64	preinst	systemctl	if ! grep -q -E 'libnss_(compat|db|files)' /proc/$(systemctl show --property MainPID --value systemd-logind.service)/maps >/dev/null 2>&1; then
+libnewt0.52:amd64	preinst	update-alternatives	update-alternatives --quiet --remove-all newt-palette >/dev/null 2>&1 || true
+libpam0g:amd64	postinst	invoke-rc.d	idl="invoke-rc.d ${service}"
+libpam0g:amd64	postinst	invoke-rc.d	idl="invoke-rc.d ${service}"
+libpam0g:amd64	postinst	systemctl	if systemctl try-restart $1; then
+libpam0g:amd64	postinst	systemctl	systemctl is-enabled --quiet $1 || return 1
+libpam-modules-bin	postinst	systemctl	systemctl --system daemon-reload >/dev/null || true
+libpam-modules-bin	postrm	systemctl	systemctl --system daemon-reload >/dev/null || true
+logrotate	postinst	deb-systemd-helper	deb-systemd-helper enable 'logrotate.timer' >/dev/null || true
+logrotate	postinst	deb-systemd-helper	deb-systemd-helper unmask 'logrotate.timer' >/dev/null || true
+logrotate	postinst	deb-systemd-helper	deb-systemd-helper update-state 'logrotate.timer' >/dev/null || true
+logrotate	postinst	deb-systemd-helper	if deb-systemd-helper --quiet was-enabled 'logrotate.timer'; then
+logrotate	postinst	systemctl	systemctl --system daemon-reload >/dev/null || true
+logrotate	postrm	deb-systemd-helper	deb-systemd-helper purge 'logrotate.timer' >/dev/null || true
+logrotate	postrm	deb-systemd-helper	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+logrotate	postrm	systemctl	systemctl --system daemon-reload >/dev/null || true
+mawk	postinst	update-alternatives	update-alternatives --install /usr/bin/awk awk /usr/bin/mawk 5 \
+mawk	prerm	update-alternatives	update-alternatives --remove awk /usr/bin/mawk
+nano	postinst	update-alternatives	update-alternatives --install /usr/bin/editor editor /bin/nano 40 \
+nano	postinst	update-alternatives	update-alternatives --install /usr/bin/pico pico /bin/nano 10 \
+nano	prerm	update-alternatives	update-alternatives --remove editor /bin/nano
+nano	prerm	update-alternatives	update-alternatives --remove pico /bin/nano
+nftables	postinst	deb-systemd-helper	deb-systemd-helper enable 'nftables.service' >/dev/null || true
+nftables	postinst	deb-systemd-helper	deb-systemd-helper unmask 'nftables.service' >/dev/null || true
+nftables	postinst	deb-systemd-helper	deb-systemd-helper update-state 'nftables.service' >/dev/null || true
+nftables	postinst	deb-systemd-helper	if deb-systemd-helper debian-installed 'nftables.service'; then
+nftables	postinst	deb-systemd-helper	if deb-systemd-helper --quiet was-enabled 'nftables.service'; then
+nftables	postinst	systemctl	systemctl --system daemon-reload >/dev/null || true
+nftables	postrm	deb-systemd-helper	deb-systemd-helper purge 'nftables.service' >/dev/null || true
+nftables	postrm	deb-systemd-helper	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+nftables	postrm	systemctl	systemctl --system daemon-reload >/dev/null || true
+passwd	postinst	groupadd	groupadd -g 42 shadow || (
+procps	postinst	update-rc.d	update-rc.d procps defaults >/dev/null || exit 1
+procps	postrm	update-rc.d	update-rc.d procps remove >/dev/null
+systemd	postinst	systemctl	if [ "$(_systemctl show -P LoadState systemd-binfmt.service)" != "masked" ]; then
+systemd	postinst	systemctl	if [ "$(_systemctl show -P LoadState systemd-sysctl.service)" != "masked" ]; then
+systemd	postinst	systemctl	if [ -n "$2" ] && [ "$(systemctl is-system-running)" != "stopping" ]; then
+systemd	postinst	systemctl	_systemctl() {
+systemd	postinst	systemctl	systemctl "$@"
+systemd	postinst	systemctl	systemctl ${DPKG_ROOT:+--root="$DPKG_ROOT"} enable getty@tty1.service || true
+systemd	postinst	systemctl	systemctl ${DPKG_ROOT:+--root="$DPKG_ROOT"} enable remote-fs.target || true
+systemd	postinst	systemctl	systemctl ${DPKG_ROOT:+--root="$DPKG_ROOT"} enable systemd-pstore.service || true
+systemd	postinst	systemctl	_systemctl daemon-reexec || true
+systemd	postinst	systemctl	_systemctl kill --kill-whom='main' --signal='SIGRTMIN+25' 'user@*.service' || true
+systemd	postinst	systemctl	_systemctl restart systemd-binfmt.service || true
+systemd	postinst	systemctl	_systemctl restart systemd-sysctl.service || true
+systemd	postinst	systemctl	_systemctl try-restart systemd-journald.service || true
+systemd	postinst	systemctl	_systemctl try-restart systemd-networkd.service || true
+systemd	preinst	systemctl	# Do not use systemctl here, as libsystemd-shared might not be unpacked yet
+systemd	preinst	systemctl	# The user may have used 'systemctl enable /usr/share/systemd/tmp.mount', which
+systemd-sysv	postinst	systemctl	ln -sf ../bin/systemctl "$fn"
+tar	postinst	update-alternatives	update-alternatives --install /usr/sbin/rmt rmt /usr/sbin/rmt-tar 50 \
+tar	prerm	update-alternatives	update-alternatives --remove rmt /usr/sbin/rmt-tar
+udev	postinst	systemctl	systemctl --system daemon-reload >/dev/null || true
+udev	postinst	update-rc.d	update-rc.d udev remove || true
+udev	postrm	systemctl	systemctl --system daemon-reload >/dev/null || true
+util-linux	postinst	deb-systemd-helper	deb-systemd-helper enable 'fstrim.timer' >/dev/null || true
+util-linux	postinst	deb-systemd-helper	deb-systemd-helper unmask 'fstrim.timer' >/dev/null || true
+util-linux	postinst	deb-systemd-helper	deb-systemd-helper update-state 'fstrim.timer' >/dev/null || true
+util-linux	postinst	deb-systemd-helper	if deb-systemd-helper --quiet was-enabled 'fstrim.timer'; then
+util-linux	postinst	systemctl	systemctl --system daemon-reload >/dev/null || true
+util-linux	postinst	systemctl	systemctl --system daemon-reload >/dev/null || true
+util-linux	postinst	update-alternatives	update-alternatives --install /usr/bin/pager pager /bin/more 50 \
+util-linux	postrm	deb-systemd-helper	deb-systemd-helper purge 'fstrim.timer' >/dev/null || true
+util-linux	postrm	deb-systemd-helper	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+util-linux	postrm	systemctl	systemctl --system daemon-reload >/dev/null || true
+util-linux	postrm	systemctl	systemctl --system daemon-reload >/dev/null || true
+util-linux	prerm	update-alternatives	update-alternatives --remove pager /bin/more
+vim-tiny	postinst	update-alternatives	update-alternatives --install /usr/bin/editor editor /usr/bin/vim.tiny 15 \
+vim-tiny	postinst	update-alternatives	update-alternatives --install /usr/bin/ex ex /usr/bin/vim.tiny 15 \
+vim-tiny	postinst	update-alternatives	update-alternatives --install /usr/bin/rview rview /usr/bin/vim.tiny 15
+vim-tiny	postinst	update-alternatives	update-alternatives --install /usr/bin/view view /usr/bin/vim.tiny 15 \
+vim-tiny	postinst	update-alternatives	update-alternatives --install /usr/bin/vi vi /usr/bin/vim.tiny 15 \
+vim-tiny	prerm	update-alternatives	update-alternatives --remove editor /usr/bin/vim.tiny
+vim-tiny	prerm	update-alternatives	update-alternatives --remove ex /usr/bin/vim.tiny
+vim-tiny	prerm	update-alternatives	update-alternatives --remove rview /usr/bin/vim.tiny
+vim-tiny	prerm	update-alternatives	update-alternatives --remove view /usr/bin/vim.tiny
+vim-tiny	prerm	update-alternatives	update-alternatives --remove vi /usr/bin/vim.tiny

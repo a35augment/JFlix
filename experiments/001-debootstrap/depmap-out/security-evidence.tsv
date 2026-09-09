@@ -1,0 +1,13 @@
+path	evidence_type	package
+/usr/bin/chage	setuid-or-setgid	passwd
+/usr/bin/chfn	setuid-or-setgid	passwd
+/usr/bin/chsh	setuid-or-setgid	passwd
+/usr/bin/crontab	setuid-or-setgid	cron
+/usr/bin/expiry	setuid-or-setgid	passwd
+/usr/bin/gpasswd	setuid-or-setgid	passwd
+/usr/bin/mount	setuid-or-setgid	mount
+/usr/bin/newgrp	setuid-or-setgid	login
+/usr/bin/passwd	setuid-or-setgid	passwd
+/usr/bin/su	setuid-or-setgid	util-linux
+/usr/bin/umount	setuid-or-setgid	mount
+/usr/sbin/unix_chkpwd	setuid-or-setgid	libpam-modules-bin

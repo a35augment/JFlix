@@ -1,0 +1,198 @@
+adduser	Depends	passwd
+adduser	Suggests	liblocale-gettext-perl, perl, cron, quota
+apt	Depends	base-passwd | adduser, sqv , libapt-pkg7.0 , debian-archive-keyring, libc6 , libgcc-s1 , libseccomp2 , libssl3t64 , libstdc++6 , libsystemd0
+apt	Recommends	ca-certificates
+apt	Suggests	apt-doc, aptitude | synaptic | wajig, dpkg-dev , gnupg | gnupg2 | gnupg1, powermgmt-base
+apt-utils	Depends	apt , libapt-pkg7.0 , libc6 , libdb5.3t64, libgcc-s1 , libstdc++6
+base-files	Pre-Depends	awk
+base-passwd	Depends	libc6 , libdebconfclient0 , libselinux1
+base-passwd	Recommends	debconf | debconf-2.0
+bash	Depends	base-files , debianutils
+bash	Pre-Depends	libc6 , libtinfo6
+bash	Recommends	bash-completion
+bash	Suggests	bash-doc
+bsdutils	Pre-Depends	libc6 , libsystemd0
+bsdutils	Recommends	bsdextrautils
+coreutils	Pre-Depends	libacl1 , libattr1 , libc6 , libcap2 , libgmp10 , libselinux1 , libssl3t64 , libsystemd0
+cpio	Depends	libc6
+cpio	Suggests	libarchive-dev
+cron	Depends	libc6 , libpam0g , libselinux1 , sensible-utils, libpam-runtime
+cron	Pre-Depends	init-system-helpers , cron-daemon-common
+cron	Recommends	default-mta | mail-transport-agent
+cron	Suggests	anacron, logrotate, checksecurity, supercat, bat
+cron-daemon-common	Depends	systemd | systemd-standalone-sysusers | systemd-sysusers, adduser
+dash	Depends	debianutils
+dash	Pre-Depends	libc6
+debconf	Recommends	apt | apt-utils, debconf-i18n
+debconf	Suggests	debconf-doc, debconf-kde-helper, debconf-utils, libgtk3-perl, libnet-ldap-perl, libterm-readline-gnu-perl, perl, whiptail | dialog
+debconf-i18n	Depends	debconf , liblocale-gettext-perl, libtext-charwidth-perl, libtext-iconv-perl, libtext-wrapi18n-perl
+debianutils	Pre-Depends	libc6
+dhcpcd-base	Depends	adduser, libc6 , libssl3t64 , libudev1
+dhcpcd-base	Suggests	openresolv | resolvconf | systemd-resolved
+diffutils	Pre-Depends	libc6
+diffutils	Suggests	diffutils-doc, wdiff
+dmidecode	Depends	libc6
+dpkg	Depends	tar
+dpkg	Pre-Depends	libbz2-1.0, libc6 , liblzma5 , libmd0 , libselinux1 , libzstd1 , zlib1g
+dpkg	Suggests	apt, debsig-verify
+e2fsprogs	Depends	logsave
+e2fsprogs	Pre-Depends	libblkid1 , libc6 , libcom-err2 , libext2fs2t64 , libss2 , libuuid1
+e2fsprogs	Recommends	e2fsprogs-l10n
+e2fsprogs	Suggests	gpart, parted, fuse2fs, e2fsck-static, libarchive13t64
+fdisk	Depends	libc6 , libfdisk1 , libmount1 , libncursesw6 , libreadline8t64 , libsmartcols1 , libtinfo6
+fdisk	Recommends	sensible-utils
+findutils	Pre-Depends	libc6 , libselinux1
+grep	Pre-Depends	libc6 , libpcre2-8-0
+gzip	Pre-Depends	libc6
+gzip	Suggests	less
+hostname	Pre-Depends	libc6
+ifupdown	Depends	libc6 , adduser, iproute2
+ifupdown	Recommends	dhcpcd-base | dhcp-client
+ifupdown	Suggests	ppp, rdnssd
+init	Pre-Depends	systemd-sysv | sysvinit-core
+iproute2	Depends	debconf | debconf-2.0, libbpf1 , libc6 , libcap2 , libdb5.3t64, libelf1t64 , libmnl0 , libselinux1 , libtirpc3t64 , libxtables12 , libcap2-bin
+iproute2	Suggests	python3:any
+iputils-ping	Depends	libc6 , libcap2 , libidn2-0
+iputils-ping	Recommends	linux-sysctl-defaults
+kmod	Depends	libc6 , libssl3t64 , libkmod2
+less	Depends	libc6 , libtinfo6
+libacl1	Depends	libc6
+libapparmor1	Depends	libc6
+libapt-pkg7.0	Depends	libbz2-1.0, libc6 , libgcc-s1 , liblz4-1 , liblzma5 , libssl3t64 , libstdc++6 , libsystemd0 , libudev1 , libxxhash0 , libzstd1 , zlib1g
+libapt-pkg7.0	Recommends	apt
+libattr1	Depends	libc6
+libaudit1	Depends	libaudit-common , libc6 , libcap-ng0
+libblkid1	Depends	libc6
+libbpf1	Depends	libc6 , libelf1t64 , zlib1g
+libbsd0	Depends	libc6 , libmd0
+libbz2-1.0	Depends	libc6
+libc-bin	Depends	libc6 , libc6
+libc-bin	Recommends	manpages
+libc6	Depends	libgcc-s1
+libc6	Recommends	libidn2-0
+libc6	Suggests	glibc-doc, debconf | debconf-2.0, libc-l10n, locales, libnss-nis, libnss-nisplus
+libcap-ng0	Depends	libc6
+libcap2	Depends	libc6
+libcap2-bin	Depends	libc6 , libcap2
+libcap2-bin	Recommends	libpam-cap
+libcom-err2	Depends	libc6
+libcrypt1	Depends	libc6
+libdb5.3t64	Depends	libc6
+libdebconfclient0	Depends	libc6
+libedit2	Depends	libbsd0 , libc6 , libtinfo6
+libelf1t64	Depends	libc6 , libzstd1 , zlib1g
+libext2fs2t64	Depends	libc6
+libfdisk1	Depends	libblkid1 , libc6 , libuuid1
+libgcc-s1	Depends	gcc-14-base , libc6
+libgmp10	Depends	libc6
+libgssapi-krb5-2	Depends	libkrb5-3 , libc6 , libcom-err2 , libk5crypto3 , libkrb5support0
+libgssapi-krb5-2	Suggests	krb5-doc, krb5-user
+libhogweed6t64	Depends	libc6 , libgmp10 , libnettle8t64
+libidn2-0	Depends	libc6 , libunistring5
+libjansson4	Depends	libc6
+libk5crypto3	Depends	libc6 , libkrb5support0
+libk5crypto3	Suggests	krb5-doc, krb5-user
+libkeyutils1	Depends	libc6
+libkmod2	Depends	libc6 , libssl3t64
+libkrb5-3	Depends	libkrb5support0 , libc6 , libcom-err2 , libk5crypto3 , libkeyutils1 , libssl3t64
+libkrb5-3	Recommends	krb5-locales
+libkrb5-3	Suggests	krb5-doc, krb5-user
+libkrb5support0	Depends	libc6
+liblastlog2-2	Depends	libc6 , libsqlite3-0
+liblocale-gettext-perl	Depends	libc6
+liblocale-gettext-perl	Pre-Depends	perl-base , perlapi-5.40.0
+liblz4-1	Depends	libc6 , libxxhash0
+liblzma5	Depends	libc6
+libmd0	Depends	libc6
+libmnl0	Depends	libc6
+libmount1	Depends	libblkid1 , libc6 , libselinux1
+libmount1	Suggests	cryptsetup-bin
+libncursesw6	Depends	libtinfo6 , libc6
+libncursesw6	Recommends	libgpm2
+libnettle8t64	Depends	libc6
+libnewt0.52	Depends	libc6 , libslang2
+libnewt0.52	Recommends	libfribidi0
+libnftables1	Depends	libc6 , libgmp10 , libjansson4 , libmnl0 , libnftnl11 , libxtables12
+libnftnl11	Depends	libc6 , libmnl0
+libpam-modules	Pre-Depends	libaudit1 , libc6 , libcrypt1 , libdb5.3t64, libpam0g , libselinux1 , libsystemd0 , debconf | debconf-2.0, libpam-modules-bin
+libpam-modules-bin	Depends	libaudit1 , libc6 , libcrypt1 , libpam0g , libselinux1 , libsystemd0
+libpam-runtime	Depends	debconf | debconf-2.0, debconf | cdebconf, libpam-modules
+libpam0g	Depends	libaudit1 , libc6 , debconf | debconf-2.0
+libpam0g	Suggests	libpam-doc
+libpcre2-8-0	Depends	libc6
+libpopt0	Depends	libc6
+libproc2-0	Depends	libc6 , libsystemd0
+libreadline8t64	Depends	readline-common, libc6 , libtinfo6
+libseccomp2	Depends	libc6
+libselinux1	Depends	libc6 , libpcre2-8-0
+libsemanage2	Depends	libsemanage-common , libaudit1 , libbz2-1.0, libc6 , libselinux1 , libsepol2
+libsepol2	Depends	libc6
+libslang2	Depends	libc6
+libsmartcols1	Depends	libc6
+libsqlite3-0	Depends	libc6
+libss2	Depends	libcom-err2, libc6
+libssl3t64	Depends	libc6 , libzstd1 , zlib1g , openssl-provider-legacy
+libstdc++6	Depends	gcc-14-base , libc6 , libgcc-s1
+libsystemd-shared	Depends	libacl1 , libaudit1 , libblkid1 , libc6 , libcap2 , libcrypt1 , libmount1 , libpam0g , libseccomp2 , libselinux1 , libssl3t64
+libsystemd-shared	Recommends	libkmod2, libzstd1
+libsystemd-shared	Suggests	libarchive13t64, libbpf1, libcryptsetup12, libdw1t64, libelf1t64, libfido2-1, libgcrypt20, libidn2-0, libip4tc2, liblz4-1, liblzma5, libp11-kit0, libpcre2-8-0, libpwquality1, libqrencode4, libtss2-rc0t64
+libsystemd0	Depends	libc6 , libcap2
+libsystemd0	Recommends	libzstd1
+libsystemd0	Suggests	libgcrypt20, liblz4-1, liblzma5
+libtext-charwidth-perl	Depends	libc6 , perl-base , perlapi-5.40.0
+libtext-iconv-perl	Depends	libc6 , perl-base , perlapi-5.40.0
+libtext-wrapi18n-perl	Depends	libtext-charwidth-perl
+libtinfo6	Depends	libc6
+libtirpc3t64	Depends	libc6 , libgssapi-krb5-2 , libtirpc-common
+libudev1	Depends	libc6 , libcap2
+libudev1	Suggests	libidn2-0
+libunistring5	Depends	libc6
+libuuid1	Depends	libc6
+libuuid1	Suggests	uuid-runtime
+libxtables12	Depends	libc6
+libxxhash0	Depends	libc6
+libzstd1	Depends	libc6
+login	Depends	libpam-modules, libpam-runtime, libaudit1 , libc6 , libcrypt1 , libpam0g
+login	Pre-Depends	login.defs
+logrotate	Depends	cron | anacron | cron-daemon | systemd-sysv, libacl1 , libc6 , libpopt0 , libselinux1
+logrotate	Suggests	bsd-mailx | mailx
+logsave	Depends	libc6
+mawk	Depends	libc6
+mount	Pre-Depends	libblkid1 , libc6 , libmount1 , libselinux1 , libsmartcols1
+mount	Suggests	nfs-common
+nano	Depends	libc6 , libncursesw6 , libtinfo6
+nano	Suggests	hunspell
+ncurses-bin	Pre-Depends	libc6 , libtinfo6
+nftables	Depends	libnftables1 , libc6 , libedit2
+nftables	Recommends	netbase
+nftables	Suggests	firewalld
+openssl-provider-legacy	Depends	libc6 , libssl3t64
+passwd	Depends	base-passwd , libpam-modules, login.defs, libacl1 , libattr1 , libaudit1 , libbsd0 , libc6 , libcrypt1 , libpam0g , libselinux1 , libsemanage2
+passwd	Recommends	sensible-utils
+perl-base	Pre-Depends	libc6 , libcrypt1
+perl-base	Suggests	perl, sensible-utils
+procps	Depends	libc6 , libncursesw6 , libproc2-0 , libsystemd0 , libtinfo6 , init-system-helpers
+procps	Recommends	psmisc, linux-sysctl-defaults
+readline-common	Suggests	readline-doc
+sed	Pre-Depends	libacl1 , libc6 , libselinux1
+sqv	Depends	libc6 , libgcc-s1 , libgmp10 , libhogweed6t64, libnettle8t64
+systemd	Depends	libacl1 , libapparmor1 , libc6 , libmount1 , libpam0g , libseccomp2 , libselinux1 , libssl3t64 , libsystemd0 , mount
+systemd	Pre-Depends	libc6 , libsystemd-shared
+systemd	Recommends	default-dbus-system-bus | dbus-system-bus, linux-sysctl-defaults, systemd-timesyncd | time-daemon, systemd-cryptsetup
+systemd	Suggests	systemd-container, systemd-homed, systemd-userdbd, systemd-boot, systemd-resolved, systemd-repart, libtss2-tcti-device0, polkitd
+systemd-sysv	Depends	systemd
+systemd-sysv	Pre-Depends	systemd
+systemd-sysv	Recommends	libpam-systemd, libnss-systemd
+sysvinit-utils	Depends	libc6
+tar	Pre-Depends	libacl1 , libc6 , libselinux1
+tar	Suggests	bzip2, ncompress, xz-utils, tar-scripts, tar-doc
+tzdata	Depends	debconf | debconf-2.0
+udev	Depends	libblkid1 , libc6 , libsystemd-shared , systemd | systemd-standalone-sysusers | systemd-sysusers, libkmod2, libudev1
+util-linux	Pre-Depends	libpam-modules, libpam-runtime, libblkid1 , libc6 , libcap-ng0 , libcrypt1 , liblastlog2-2 , libmount1 , libpam0g , libselinux1 , libsmartcols1 , libsystemd0, libtinfo6 , libudev1 , libuuid1
+util-linux	Recommends	sensible-utils
+util-linux	Suggests	dosfstools, kbd, util-linux-extra, util-linux-locales, wtmpdb
+vim-common	Recommends	xxd, vim | vim-gtk3 | vim-motif | vim-nox | vim-tiny
+vim-tiny	Depends	vim-common , libacl1 , libc6 , libselinux1 , libtinfo6
+vim-tiny	Suggests	indent
+whiptail	Depends	libc6 , libnewt0.52 , libpopt0 , libslang2
+zlib1g	Depends	libc6
