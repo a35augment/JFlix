@@ -1,176 +1,266 @@
 JFlix package classification report
 rootfs: /home/bobby/jflix/experiments/001-debootstrap/rootfs
-generated: 2026-09-09T22:06:14Z
+generated: 2026-09-09T23:01:09Z
 
 == CORE  (manual - substrate, would not survive removal) ==
    11 package(s), 45771 KB installed
 
-   -- UNCLASSIFIED (11 pkg, 45771 KB) --
+   -- DEBIAN-SUBSTRATE (2 pkg, 622 KB) --
    PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
    base-files             1         1         350      0      0      bash
    base-passwd            3         2         272      0      0      apt,passwd
-   coreutils              8         0         18457    0      0      -
-   dash                   2         0         207      0      0      -
+
+   -- PACKAGE-MANAGEMENT (1 pkg, 6587 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
    dpkg                   8         0         6587     8      0      -
-   findutils              2         0         2160     0      0      -
-   grep                   2         0         1266     0      0      -
-   init-system-helpers    0         2         133      0      0      cron,procps
+
+   -- EXECUTABLE-RUNTIME (2 pkg, 15348 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
    libc6                  1         122       13226    0      0      apt,apt-utils,base-passwd,bash (+118 more)
    libc-bin               2         0         2122     0      0      -
+
+   -- SHELL-USERSPACE (5 pkg, 23081 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   coreutils              8         0         18457    0      0      -
+   dash                   2         0         207      0      0      -
+   findutils              2         0         2160     0      0      -
+   grep                   2         0         1266     0      0      -
    sed                    3         0         991      0      0      -
+
+   -- INIT-SERVICE (1 pkg, 133 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   init-system-helpers    0         2         133      0      0      cron,procps
 
 == DEBIAN-ESSENTIAL  (auto - Priority: required/important, or Essential: yes) ==
    33 package(s), 39665 KB installed
 
-   -- UNCLASSIFIED (33 pkg, 39665 KB) --
+   -- DEBIAN-SUBSTRATE (3 pkg, 1636 KB) --
    PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
-   adduser                1         4         428      0      0      apt,cron-daemon-common,dhcpcd-base,ifupdown
+   debianutils            1         2         225      2      0      bash,dash
+   hostname               1         0         50       0      0      -
+   tzdata                 2         0         1361     0      0      -
+
+   -- PACKAGE-MANAGEMENT (5 pkg, 7207 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
    apt                    11        1         4480     13     0      apt-utils
    apt-utils              6         0         1086     0      0      -
-   bash                   4         0         7196     2      0      -
-   bsdutils               2         0         401      0      0      -
-   cpio                   1         0         1197     2      0      -
    debconf                0         12        497      0      0      debconf-i18n,iproute2,iproute2,libpam0g (+8 more)
    debconf-i18n           5         0         842      0      0      -
    debian-archive-keyring 0         1         302      0      0      apt
-   debianutils            1         2         225      2      0      bash,dash
+
+   -- SHELL-USERSPACE (7 pkg, 14195 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   bash                   4         0         7196     2      0      -
+   bsdutils               2         0         401      0      0      -
+   cpio                   1         0         1197     2      0      -
    diffutils              1         0         1768     0      0      -
-   e2fsprogs              7         0         1537     12     0      -
    gzip                   1         0         256      0      0      -
-   hostname               1         0         50       0      0      -
-   init                   2         0         17       0      0      -
-   libcap2-bin            2         1         132      0      0      iproute2
+   mawk                   1         1         292      2      0      base-files
+   tar                    3         1         3085     2      0      dpkg
+
+   -- PERL-RUNTIME (5 pkg, 7982 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
    liblocale-gettext-perl 3         1         53       0      0      debconf-i18n
    libtext-charwidth-perl 3         2         42       0      0      debconf-i18n,libtext-wrapi18n-perl
    libtext-iconv-perl     3         1         50       0      0      debconf-i18n
    libtext-wrapi18n-perl  1         1         26       0      0      debconf-i18n
-   linux-sysctl-defaults  0         0         19       0      0      -
+   perl-base              2         6         7811     0      0      liblocale-gettext-perl,liblocale-gettext-perl,libtext-charwidth-perl,libtext-charwidth-perl (+2 more)
+
+   -- ACCOUNTS-AUTH (5 pkg, 5816 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   adduser                1         4         428      0      0      apt,cron-daemon-common,dhcpcd-base,ifupdown
+   libcap2-bin            2         1         132      0      0      iproute2
    login                  7         0         284      0      1      -
    login.defs             0         2         214      0      0      login,passwd
-   mawk                   1         1         292      2      0      base-files
+   passwd                 12        1         4758     1      6      adduser
+
+   -- INIT-SERVICE (2 pkg, 121 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   init                   2         0         17       0      0      -
+   sysvinit-utils         1         0         104      0      0      -
+
+   -- DEVICE-KERNEL (1 pkg, 19 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   linux-sysctl-defaults  0         0         19       0      0      -
+
+   -- NETWORKING (1 pkg, 35 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   netbase                0         0         35       0      0      -
+
+   -- FILESYSTEM-STORAGE (1 pkg, 1537 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   e2fsprogs              7         0         1537     12     0      -
+
+   -- ADMIN-HUMAN-INTERFACE (3 pkg, 1117 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
    ncurses-base           0         0         389      0      0      -
    ncurses-bin            2         0         665      0      0      -
-   netbase                0         0         35       0      0      -
-   passwd                 12        1         4758     1      6      adduser
-   perl-base              2         6         7811     0      0      liblocale-gettext-perl,liblocale-gettext-perl,libtext-charwidth-perl,libtext-charwidth-perl (+2 more)
    sensible-utils         0         1         63       0      0      cron
-   sysvinit-utils         1         0         104      0      0      -
-   tar                    3         1         3085     2      0      dpkg
-   tzdata                 2         0         1361     0      0      -
 
 == ARCHITECTURAL  (manual - JFlix must decide its role) ==
    15 package(s), 35389 KB installed
 
-   -- UNCLASSIFIED (15 pkg, 35389 KB) --
+   -- ACCOUNTS-AUTH (4 pkg, 2351 KB) --
    PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
-   dhcpcd-base            4         0         495      1      0      -
-   ifupdown               3         0         200      18     0      -
-   iproute2               12        1         3774     0      0      ifupdown
-   kmod                   3         0         255      2      0      -
    libpam0g               4         8         194      0      0      cron,libpam-modules-bin,libpam-modules,libsystemd-shared (+4 more)
    libpam-modules         10        4         923      0      0      libpam-runtime,login,passwd,util-linux
    libpam-modules-bin     6         1         206      2      1      libpam-modules
    libpam-runtime         5         3         1028     0      0      cron,login,util-linux
-   mount                  5         1         496      0      2      systemd
-   nftables               3         0         185      9      0      -
-   procps                 6         0         2395     2      0      -
+
+   -- INIT-SERVICE (2 pkg, 10041 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
    systemd                12        6         9944     16     0      cron-daemon-common,cron-daemon-common,systemd-sysv,systemd-sysv (+2 more)
    systemd-sysv           2         2         97       1      0      init,logrotate
+
+   -- DEVICE-KERNEL (3 pkg, 12886 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   kmod                   3         0         255      2      0      -
+   procps                 6         0         2395     2      0      -
    udev                   8         0         10236    3      0      -
+
+   -- NETWORKING (4 pkg, 4654 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   dhcpcd-base            4         0         495      1      0      -
+   ifupdown               3         0         200      18     0      -
+   iproute2               12        1         3774     0      0      ifupdown
+   nftables               3         0         185      9      0      -
+
+   -- FILESYSTEM-STORAGE (2 pkg, 5457 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   mount                  5         1         496      0      2      systemd
    util-linux             15        0         4961     12     1      -
 
 == DEPENDENCY  (auto - unclassified; CANDIDATEs live here) ==
    74 package(s), 53055 KB installed
 
-   -- UNCLASSIFIED (74 pkg, 53055 KB) --
+   -- PACKAGE-MANAGEMENT (3 pkg, 5748 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   libapt-pkg7.0          12        2         3855     0      0      apt,apt-utils
+   libdebconfclient0      1         1         38       0      0      base-passwd
+   sqv                    5         1         1855     0      0      apt
+
+   -- EXECUTABLE-RUNTIME (4 pkg, 3562 KB) --
    PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
    gcc-14-base            0         2         112      0      0      libgcc-s1,libstdc++6
-   libacl1                1         8         74       0      0      coreutils,libsystemd-shared,logrotate,passwd (+4 more)
-   libapparmor1           1         1         115      0      0      systemd
-   libapt-pkg7.0          12        2         3855     0      0      apt,apt-utils
-   libattr1               1         2         60       0      0      coreutils,passwd
+   libcrypt1              1         7         234      0      0      libpam-modules-bin,libpam-modules,libsystemd-shared,login (+3 more)
+   libgcc-s1              2         6         197      0      0      apt,apt-utils,libapt-pkg7.0,libc6 (+2 more)
+   libstdc++6             3         3         3019     0      0      apt,apt-utils,libapt-pkg7.0
+
+   -- SHELL-USERSPACE (1 pkg, 774 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   libpcre2-8-0           1         2         774      0      0      grep,libselinux1
+
+   -- ACCOUNTS-AUTH (11 pkg, 3883 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
    libaudit1              3         7         179      0      0      libpam0g,libpam-modules-bin,libpam-modules,libsemanage2 (+3 more)
    libaudit-common        0         1         25       0      0      libaudit1
-   libblkid1              1         7         449      0      0      e2fsprogs,libfdisk1,libmount1,libsystemd-shared (+3 more)
-   libbpf1                3         1         452      0      0      iproute2
    libbsd0                2         2         214      0      0      libedit2,passwd
-   libbz2-1.0             1         3         96       0      0      dpkg,libapt-pkg7.0,libsemanage2
    libcap2                1         7         92       0      0      coreutils,iproute2,iputils-ping,libcap2-bin (+3 more)
    libcap-ng0             1         2         66       0      0      libaudit1,util-linux
-   libcom-err2            1         4         64       0      0      e2fsprogs,libgssapi-krb5-2,libkrb5-3,libss2
-   libcrypt1              1         7         234      0      0      libpam-modules-bin,libpam-modules,libsystemd-shared,login (+3 more)
-   libdb5.3t64            1         3         1854     0      0      apt-utils,iproute2,libpam-modules
-   libdebconfclient0      1         1         38       0      0      base-passwd
-   libedit2               3         1         262      0      0      nftables
-   libelf1t64             3         2         1228     0      0      iproute2,libbpf1
-   libext2fs2t64          1         1         557      0      0      e2fsprogs
-   libfdisk1              3         1         584      0      0      fdisk
-   libgcc-s1              2         6         197      0      0      apt,apt-utils,libapt-pkg7.0,libc6 (+2 more)
-   libgmp10               1         4         882      0      0      coreutils,libhogweed6t64,libnftables1,sqv
-   libgssapi-krb5-2       5         1         434      0      0      libtirpc3t64
-   libhogweed6t64         3         1         483      0      0      sqv
-   libidn2-0              2         1         446      0      0      iputils-ping
-   libjansson4            1         1         100      0      0      libnftables1
-   libk5crypto3           2         2         266      0      0      libgssapi-krb5-2,libkrb5-3
-   libkeyutils1           1         1         41       0      0      libkrb5-3
-   libkmod2               2         2         144      0      0      kmod,udev
-   libkrb5-3              6         1         1074     0      0      libgssapi-krb5-2
-   libkrb5support0        1         3         137      0      0      libgssapi-krb5-2,libk5crypto3,libkrb5-3
    liblastlog2-2          2         1         75       0      0      util-linux
-   liblz4-1               2         1         173      0      0      libapt-pkg7.0
-   liblzma5               1         2         435      0      0      dpkg,libapt-pkg7.0
-   libmd0                 1         2         94       0      0      dpkg,libbsd0
-   libmnl0                1         3         45       0      0      iproute2,libnftables1,libnftnl11
-   libmount1              3         5         565      0      0      fdisk,libsystemd-shared,mount,systemd (+1 more)
-   libncursesw6           2         3         419      0      0      fdisk,nano,procps
-   libnettle8t64          1         2         560      0      0      libhogweed6t64,sqv
-   libnewt0.52            2         1         365      0      0      whiptail
-   libnftables1           6         1         1054     0      0      nftables
-   libnftnl11             2         1         244      0      0      libnftables1
-   libpcre2-8-0           1         2         774      0      0      grep,libselinux1
-   libpopt0               1         2         245      0      0      logrotate,whiptail
-   libproc2-0             2         1         237      0      0      procps
-   libreadline8t64        3         1         485      0      0      fdisk
-   libseccomp2            1         3         201      0      0      apt,libsystemd-shared,systemd
    libselinux1            2         19        229      0      0      base-passwd,coreutils,cron,dpkg (+15 more)
    libsemanage2           6         1         313      0      0      passwd
    libsemanage-common     0         1         21       0      0      libsemanage2
    libsepol2              1         1         835      0      0      libsemanage2
-   libslang2              1         2         2395     0      0      libnewt0.52,whiptail
-   libsmartcols1          1         3         377      0      0      fdisk,mount,util-linux
    libsqlite3-0           1         1         1834     0      0      liblastlog2-2
-   libss2                 2         1         80       0      0      e2fsprogs
-   libssl3t64             4         10        8099     0      0      apt,coreutils,dhcpcd-base,kmod (+6 more)
-   libstdc++6             3         3         3019     0      0      apt,apt-utils,libapt-pkg7.0
+
+   -- INIT-SERVICE (4 pkg, 8364 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   libapparmor1           1         1         115      0      0      systemd
+   libseccomp2            1         3         201      0      0      apt,libsystemd-shared,systemd
    libsystemd0            2         10        1223     0      0      apt,bsdutils,coreutils,libapt-pkg7.0 (+6 more)
    libsystemd-shared      11        2         6825     0      0      systemd,udev
-   libtinfo6              1         11        569      0      0      bash,fdisk,less,libedit2 (+7 more)
+
+   -- DEVICE-KERNEL (3 pkg, 738 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   libkmod2               2         2         144      0      0      kmod,udev
+   libproc2-0             2         1         237      0      0      procps
+   libudev1               2         4         357      0      0      dhcpcd-base,libapt-pkg7.0,udev,util-linux
+
+   -- NETWORKING (16 pkg, 7982 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   libbpf1                3         1         452      0      0      iproute2
+   libelf1t64             3         2         1228     0      0      iproute2,libbpf1
+   libgssapi-krb5-2       5         1         434      0      0      libtirpc3t64
+   libidn2-0              2         1         446      0      0      iputils-ping
+   libjansson4            1         1         100      0      0      libnftables1
+   libk5crypto3           2         2         266      0      0      libgssapi-krb5-2,libkrb5-3
+   libkeyutils1           1         1         41       0      0      libkrb5-3
+   libkrb5-3              6         1         1074     0      0      libgssapi-krb5-2
+   libkrb5support0        1         3         137      0      0      libgssapi-krb5-2,libk5crypto3,libkrb5-3
+   libmnl0                1         3         45       0      0      iproute2,libnftables1,libnftnl11
+   libnftables1           6         1         1054     0      0      nftables
+   libnftnl11             2         1         244      0      0      libnftables1
    libtirpc3t64           3         1         236      0      0      iproute2
    libtirpc-common        0         1         32       0      0      libtirpc3t64
-   libudev1               2         4         357      0      0      dhcpcd-base,libapt-pkg7.0,udev,util-linux
    libunistring5          1         1         2092     0      0      libidn2-0
-   libuuid1               1         3         98       0      0      e2fsprogs,libfdisk1,util-linux
    libxtables12           1         2         101      0      0      iproute2,libnftables1
+
+   -- FILESYSTEM-STORAGE (11 pkg, 2967 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   libacl1                1         8         74       0      0      coreutils,libsystemd-shared,logrotate,passwd (+4 more)
+   libattr1               1         2         60       0      0      coreutils,passwd
+   libblkid1              1         7         449      0      0      e2fsprogs,libfdisk1,libmount1,libsystemd-shared (+3 more)
+   libcom-err2            1         4         64       0      0      e2fsprogs,libgssapi-krb5-2,libkrb5-3,libss2
+   libext2fs2t64          1         1         557      0      0      e2fsprogs
+   libfdisk1              3         1         584      0      0      fdisk
+   libmount1              3         5         565      0      0      fdisk,libsystemd-shared,mount,systemd (+1 more)
+   libsmartcols1          1         3         377      0      0      fdisk,mount,util-linux
+   libss2                 2         1         80       0      0      e2fsprogs
+   libuuid1               1         3         98       0      0      e2fsprogs,libfdisk1,util-linux
+   logsave                1         1         59       0      0      e2fsprogs
+
+   -- ADMIN-HUMAN-INTERFACE (8 pkg, 4829 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   libedit2               3         1         262      0      0      nftables
+   libncursesw6           2         3         419      0      0      fdisk,nano,procps
+   libnewt0.52            2         1         365      0      0      whiptail
+   libpopt0               1         2         245      0      0      logrotate,whiptail
+   libreadline8t64        3         1         485      0      0      fdisk
+   libslang2              1         2         2395     0      0      libnewt0.52,whiptail
+   libtinfo6              1         11        569      0      0      bash,fdisk,less,libedit2 (+7 more)
+   readline-common        0         1         89       0      0      libreadline8t64
+
+   -- SUPPORT-LIBRARIES (13 pkg, 14208 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   libbz2-1.0             1         3         96       0      0      dpkg,libapt-pkg7.0,libsemanage2
+   libdb5.3t64            1         3         1854     0      0      apt-utils,iproute2,libpam-modules
+   libgmp10               1         4         882      0      0      coreutils,libhogweed6t64,libnftables1,sqv
+   libhogweed6t64         3         1         483      0      0      sqv
+   liblz4-1               2         1         173      0      0      libapt-pkg7.0
+   liblzma5               1         2         435      0      0      dpkg,libapt-pkg7.0
+   libmd0                 1         2         94       0      0      dpkg,libbsd0
+   libnettle8t64          1         2         560      0      0      libhogweed6t64,sqv
+   libssl3t64             4         10        8099     0      0      apt,coreutils,dhcpcd-base,kmod (+6 more)
    libxxhash0             1         2         92       0      0      libapt-pkg7.0,liblz4-1
    libzstd1               1         4         847      0      0      dpkg,libapt-pkg7.0,libelf1t64,libssl3t64
-   logsave                1         1         59       0      0      e2fsprogs
    openssl-provider-legacy 2         1         420      0      0      libssl3t64
-   readline-common        0         1         89       0      0      libreadline8t64
-   sqv                    5         1         1855     0      0      apt
    zlib1g                 1         5         173      0      0      dpkg,libapt-pkg7.0,libbpf1,libelf1t64 (+1 more)
 
 == UTILITY  (manual - human/admin convenience) ==
    11 package(s), 8372 KB installed
 
-   -- UNCLASSIFIED (11 pkg, 8372 KB) --
+   -- DEVICE-KERNEL (1 pkg, 229 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   dmidecode              1         0         229      0      0      -
+
+   -- NETWORKING (1 pkg, 187 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   iputils-ping           3         0         187      0      0      -
+
+   -- FILESYSTEM-STORAGE (1 pkg, 529 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   fdisk                  7         0         529      0      0      -
+
+   -- MAINTENANCE (3 pkg, 456 KB) --
    PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
    cron                   7         2         249      12     1      logrotate,logrotate
    cron-daemon-common     4         1         56       0      0      cron
-   dmidecode              1         0         229      0      0      -
-   fdisk                  7         0         529      0      0      -
-   iputils-ping           3         0         187      0      0      -
-   less                   2         0         376      3      0      -
    logrotate              8         0         151      8      0      -
+
+   -- ADMIN-HUMAN-INTERFACE (5 pkg, 6971 KB) --
+   PACKAGE                FWD-DEPS  RDEPS     SIZE-KB  HOOKS  SECEV  REQUIRED BY / CANDIDATE
+   less                   2         0         376      3      0      -
    nano                   3         0         2839     4      0      -
    vim-common             0         1         1864     0      0      vim-tiny
    vim-tiny               5         0         1831     10     0      -
