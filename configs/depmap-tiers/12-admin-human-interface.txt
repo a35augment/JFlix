@@ -1,0 +1,16 @@
+ncurses-base
+ncurses-bin
+sensible-utils
+less
+nano
+vim-common
+vim-tiny
+whiptail
+libedit2
+libncursesw6
+libnewt0.52
+libpopt0
+libreadline8t64
+libslang2
+libtinfo6
+readline-common

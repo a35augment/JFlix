@@ -1,0 +1,15 @@
+e2fsprogs
+mount
+util-linux
+fdisk
+libacl1
+libattr1
+libblkid1
+libcom-err2
+libext2fs2t64
+libfdisk1
+libmount1
+libsmartcols1
+libss2
+libuuid1
+logsave

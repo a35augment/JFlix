@@ -1,0 +1,11 @@
+nano
+vim-tiny
+vim-common
+less
+dmidecode
+iputils-ping
+fdisk
+cron
+cron-daemon-common
+logrotate
+whiptail

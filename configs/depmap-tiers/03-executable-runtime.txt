@@ -1,0 +1,6 @@
+libc6
+libc-bin
+gcc-14-base
+libgcc-s1
+libstdc++6
+libcrypt1

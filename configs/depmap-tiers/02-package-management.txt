@@ -1,0 +1,9 @@
+dpkg
+apt
+apt-utils
+debconf
+debconf-i18n
+debian-archive-keyring
+libapt-pkg7.0
+libdebconfclient0
+sqv

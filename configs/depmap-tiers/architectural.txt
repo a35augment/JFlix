@@ -1,0 +1,15 @@
+systemd
+systemd-sysv
+udev
+kmod
+mount
+util-linux
+iproute2
+ifupdown
+dhcpcd-base
+nftables
+procps
+libpam0g
+libpam-modules
+libpam-modules-bin
+libpam-runtime

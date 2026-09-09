@@ -1,0 +1,13 @@
+coreutils
+dash
+findutils
+grep
+sed
+bash
+bsdutils
+cpio
+diffutils
+gzip
+mawk
+tar
+libpcre2-8-0

@@ -1,0 +1,5 @@
+base-files
+base-passwd
+debianutils
+hostname
+tzdata

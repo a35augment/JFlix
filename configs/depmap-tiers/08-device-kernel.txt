@@ -1,0 +1,8 @@
+kmod
+procps
+udev
+libkmod2
+linux-sysctl-defaults
+libproc2-0
+libudev1
+dmidecode

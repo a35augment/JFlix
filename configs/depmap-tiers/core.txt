@@ -1,0 +1,11 @@
+base-files
+base-passwd
+dpkg
+libc6
+libc-bin
+dash
+coreutils
+findutils
+grep
+sed
+init-system-helpers

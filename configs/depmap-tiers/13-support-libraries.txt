@@ -1,0 +1,13 @@
+zlib1g
+libbz2-1.0
+liblz4-1
+liblzma5
+libzstd1
+libxxhash0
+libdb5.3t64
+libgmp10
+libnettle8t64
+libhogweed6t64
+libssl3t64
+openssl-provider-legacy
+libmd0
